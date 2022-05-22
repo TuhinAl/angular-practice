@@ -1,6 +1,6 @@
 <div class="form">
   <h2 id="registration">Registration Form</h2>
-  <form>
+  <form (ngSubmit) = "onSubmit(formData)" #formData ="ngForm">
 
       <div>
         <label for="fname">First Name</label>
@@ -32,6 +32,12 @@
       </select>
 
       <label for="gender">Gender:</label>
+      <input type="radio" id="male" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" value="female">
+      <label for="male">Female</label>
+      <input type="radio" id="other" value="other">
+      <label for="male">Other</label>
 
       <br><br>
       <label>Hobbies <i>(Optional)</i></label>

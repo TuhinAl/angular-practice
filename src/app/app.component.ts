@@ -9,5 +9,9 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
 
 
+  onSubmit(form: NgForm){
+    console.log('form: ',form);
+    
+  }
 
 }
