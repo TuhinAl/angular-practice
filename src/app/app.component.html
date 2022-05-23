@@ -1,6 +1,6 @@
 <div class="form">
   <h2 id="registration">Registration Form</h2>
-  <form [formGroup] = "formData" (ngSubmit)="onSubmit()">
+  <form [formGroup] = "profileForm" (ngSubmit)="onSubmit()">
 
       <div>
         <label for="fname">First Name</label>
@@ -70,9 +70,9 @@
     </form>
 </div>
 
-<div class="form-data">
+<!-- <div class="form-data">
   <h3>Form Data</h3>
   <p>First Name: <b>{{formData.value.firstName}}</b></p>
   <p>Your Hobbies: <b>{{formData.value.hobbies}}</b></p>
  
-</div>
+</div> -->

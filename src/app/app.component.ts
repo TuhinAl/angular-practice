@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,23 +7,39 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  constructor(private formbuilder: FormBuilder) { }
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.formData.value);
+    console.warn(this.profileForm.value);
   }
-  formData = new FormGroup({
-    firstName : new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    hobbies: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
-    })
+
+  // profileForm  = new FormGroup({
+  //   firstName : new FormControl(''),
+  //   lastName: new FormControl(''),
+  //   email: new FormControl(''),
+  //   hobbies: new FormControl(''),
+  //   address: new FormGroup({
+  //     street: new FormControl(''),
+  //     city: new FormControl(''),
+  //     state: new FormControl(''),
+  //     zip: new FormControl('')
+  //   })
+  // });
+
+  // using form control
+  profileForm = this.formbuilder.group({
+    firstName: [''],
+    lastName: [''],
+    email: [''],
+    hobbies: [''],
+    address: this.formbuilder.group({
+      street: [''],
+      city: [''],
+      state: [''],
+      zip: ['']
+    }),
+
   });
 
 }
