@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,16 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
 
 
-  onSubmit(form: NgForm){
-    console.log('form: ',form);
-    
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.formData.value);
   }
+  formData = new FormGroup({
+    firstName : new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl('')
+  });
 
 }
+
+// new java.math.BigDecimal( ($V{totalExpense}.doubleValue() *100) / $V{totalBudget}.doubleValue() )
