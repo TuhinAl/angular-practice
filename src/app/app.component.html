@@ -21,6 +21,25 @@
 
         
       </div>
+
+
+      <div formGroupName="address">
+        <h2>Address</h2>
+      
+        <label for="street">Street: </label>
+        <input id="street" type="text" formControlName="street">
+      
+        <label for="city">City: </label>
+        <input id="city" type="text" formControlName="city">
+      
+        <label for="state">State: </label>
+        <input id="state" type="text" formControlName="state">
+      
+        <label for="zip">Zip Code: </label>
+        <input id="zip" type="text" formControlName="zip">
+      </div>
+
+
       
       <label for="country">Country</label>
       <select id="country" name="country" >
@@ -42,9 +61,9 @@
       <br><br>
       <label>Hobbies <i>(Optional)</i></label>
       <div class="form-inline">
-          <label><input type="checkbox" value="sports" name="hobbies" > Sports</label>
-          <label><input type="checkbox" value="movies" name="hobbies" > Movies</label>
-          <label><input type="checkbox" value="music" name="hobbies" > Music</label>
+          <label><input type="checkbox" value="sports" name="hobbies" formControlName="hobbies" > Sports</label>
+          <label><input type="checkbox" value="movies" name="hobbies" formControlName="hobbies"> Movies</label>
+          <label><input type="checkbox" value="music" name="hobbies"formControlName="hobbies"> Music</label>
       </div>
     
       <input type="submit" value="Submit" id="btn"><!--[disabled]="!myForm.valid"-->
@@ -54,5 +73,6 @@
 <div class="form-data">
   <h3>Form Data</h3>
   <p>First Name: <b>{{formData.value.firstName}}</b></p>
+  <p>Your Hobbies: <b>{{formData.value.hobbies}}</b></p>
  
 </div>
