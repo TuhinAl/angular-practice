@@ -5,10 +5,16 @@
       <div>
         <label for="fname">First Name</label>
         <input type="text" id="fname" placeholder="Your name.." formControlName="firstName">
+        <div *ngIf="first?.touched && first?.invalid">
+          <small *ngIf="first?.errors?.['required']">First Name is Required</small>
+          <small *ngIf="first?.errors?.['minlength']">First Name Should be minimum length {{first?.errors?.['minlength'].requiredLength}}</small>
+        </div>
+        
         <!-- <div>
           <small *ngIf="fname.invalid && fname.touched">First Name is a required field</small>
           <span *ngIf="firstname">You entered {{firstname}}</span>
         </div> -->
+        <br>
     
         <label for="lname">Last Name</label>
         <input type="text" id="lname" placeholder="Your last name.." formControlName="lastName">
