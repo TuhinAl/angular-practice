@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -11,12 +12,12 @@ export class AppComponent {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+    console.warn(this.profileForm.value); 
   }
 
   profileForm  = new FormGroup({
     firstName : new FormControl('', [Validators.required, 
-      Validators.minLength(3)]),
+      Validators.minLength(3)]),     
     lastName: new FormControl('', Validators.required),
     email: new FormControl(''),
     hobbies: new FormControl(''),
@@ -49,6 +50,14 @@ export class AppComponent {
   //   }),
 
   // });
+
+
+  // crete a registration form using form array
+  //  1. lastName - cannot contain numeric or other expression  & required
+  //  2. username - cannot contain space // asynchronous validator with pending// username already taken
+  //  3. enter birth year
+  //  4. calculate age from birth year 
+  //  5.  gender required 
 
 }
 
