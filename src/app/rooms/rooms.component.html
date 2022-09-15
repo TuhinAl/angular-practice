@@ -1,4 +1,4 @@
-hello 
+hello
 
 <div [hidden]="isToogel">
     This Data need to be Toggle
@@ -8,12 +8,19 @@ hello
 </div>
 
 <!-- Structural Directive -->
+<div class="row" *ngIf="selectedRoom">
+    <label></label>hey you are select this room.
+    <p>Room Name: {{selectedRoom.roomName}}</p>
+    <p>Room Id: {{selectedRoom.roomId}}</p>
+    <p>Room Rent: {{selectedRoom.roomRent | currency:'BDT':'symbol-narrow' }}</p>
+    <p>Room Rent: {{selectedRoom.reserVationDate | date:'short'}}</p>
+    <p>Room Rent: {{selectedRoom.discount}}</p>
+    <p>Room Rent: {{selectedRoom.description | titlecase}}</p>
+</div>
 
-<app-room-list
-[total]="totalRooms" 
-[available]="availableRooms" 
-[booked]="bookedRooms">
+<app-room-list [total]="totalRooms" [available]="availableRooms" [booked]="bookedRooms"
+(selectedRoom)="roomSelected($event)">
 
 </app-room-list>
-    
+
 <button class="btn btn-success" (click)="toggle()">Toogle</button>

@@ -38,7 +38,11 @@
                     <p>Room Name: {{item.roomName}}</p>
                     <p> Room Id: {{item.roomId}}</p>
                     <p>Room Rent: {{item.roomRent}}</p>
-                    <br>    
+                    <p>Room Rent: {{item.reserVationDate | date:'short'}}</p>
+                    <p>Room Rent: {{item.discount}}</p>
+                    <p>Room Rent: {{item.description | titlecase}}</p>
+                    <button class="btn btn-success" (click)="selectRoom(item)">Booked Now</button>
+                    <br>      
                 </li>
             </ul>
         </div>
