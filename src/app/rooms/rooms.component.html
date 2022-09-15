@@ -1,1 +1,56 @@
-hello sdfasdfads
+hello 
+
+<div [hidden]="isToogel">
+    This Data need to be Toggle
+</div>
+<div>
+    <h1>Pacific Hotel, Dhaka, Bangladesh</h1>
+</div>
+
+<!-- Structural Directive -->
+
+    <div class="row" style="display: flex;"> 
+        <div class="col-md-4">
+            <label for=""> Total Room</label>
+            <div *ngIf="room.totalRooms.length  > 0">
+                <ul>
+                    <li *ngFor="let item of room.totalRooms">
+                        <p>Room Name: {{item.roomName}}</p>
+                        <p> Room Id: {{item.roomId}}</p>
+                        <p>Room Rent: {{item.roomRent}}</p>
+                        <br>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for=""> Booked Room</label>
+            <div *ngIf="room.bookedRooms.length  > 0">
+                <ul>
+                    <li *ngFor="let item of room.bookedRooms">
+                        <p>Room Name: {{item.roomName}}</p>
+                        <p> Room Id: {{item.roomId}}</p>
+                        <p>Room Rent: {{item.roomRent}}</p>
+                        <br>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <label for="">Available Room</label>
+            <div *ngIf="room.availableRooms.length  > 0">
+                <ul>
+                    <li *ngFor="let item of room.availableRooms">
+                        <p>Room Name: {{item.roomName}}</p>
+                        <p> Room Id: {{item.roomId}}</p>
+                        <p>Room Rent: {{item.roomRent}}</p>
+                        <br>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<button class="btn btn-success" (click)="toggle()">Toogle</button>

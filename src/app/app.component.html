@@ -1,4 +1,4 @@
-<div class="form">
+<!-- <div class="form">
   <h2 id="registration">Registration Form</h2>
   <form [formGroup] = "profileForm" (ngSubmit)="onSubmit()">
 
@@ -10,18 +10,18 @@
           <small *ngIf="first?.errors?.['minlength']">First Name Should be minimum length {{first?.errors?.['minlength'].requiredLength}}</small>
         </div>
         
-        <!-- <div>
+        <div>
           <small *ngIf="fname.invalid && fname.touched">First Name is a required field</small>
           <span *ngIf="firstname">You entered {{firstname}}</span>
         </div> -->
-        <br>
+        <!-- <br>
     
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" placeholder="Your last name.." formControlName="lastName">
+        <input type="text" id="lname" placeholder="Your last name.." formControlName="lastName"> -->
         <!-- <div>
           <span *ngIf="lastname">You entered {{lastname}}</span>
         </div> -->
-
+<!-- 
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Your last email.." formControlName="email">
 
@@ -45,8 +45,6 @@
         <input id="zip" type="text" formControlName="zip">
       </div>
 
-<tuhin></tuhin>
-      
       <label for="country">Country</label>
       <select id="country" name="country" >
         <option value="australia">Australia</option>
@@ -72,9 +70,9 @@
           <label><input type="checkbox" value="music" name="hobbies"formControlName="hobbies"> Music</label>
       </div>
     
-      <input type="submit" value="Submit" id="btn"><!--[disabled]="!myForm.valid"-->
-    </form>
-</div>
+      <input type="submit" value="Submit" id="btn">[disabled]="!myForm.valid"-->
+    <!-- </form>
+</div> --> 
 
 <!-- <div class="form-data">
   <h3>Form Data</h3>
@@ -82,3 +80,5 @@
   <p>Your Hobbies: <b>{{formData.value.hobbies}}</b></p>
  
 </div> -->
+
+<app-rooms></app-rooms>
