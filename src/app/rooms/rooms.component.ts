@@ -10,6 +10,7 @@ import { SingleRoom } from "./single-room";
 export class RoomsComponent {
     isToogel: Boolean = false;
     selectedRoom: SingleRoom
+    roomTitle: string = ' Your Room ';
 
     bookedRooms: Array<SingleRoom> = [
         {
@@ -190,6 +191,7 @@ export class RoomsComponent {
 
     toggle() {
         this.isToogel = !this.isToogel;
+        this.roomTitle = 'Ours Room';
     }
 
     roomSelected(room: SingleRoom) {

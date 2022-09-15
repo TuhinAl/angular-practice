@@ -6,7 +6,7 @@ hello
 <div>
     <h1>Pacific Hotel, Dhaka, Bangladesh</h1>
 </div>
-
+<button class="btn btn-success" (click)="toggle()">Toogle</button>
 <!-- Structural Directive -->
 <div class="row" *ngIf="selectedRoom">
     <label></label>hey you are select this room.
@@ -19,8 +19,7 @@ hello
 </div>
 
 <app-room-list [total]="totalRooms" [available]="availableRooms" [booked]="bookedRooms"
-(selectedRoom)="roomSelected($event)">
+(selectedRoom)="roomSelected($event)" [title]="roomTitle" >
 
 </app-room-list>
 
-<button class="btn btn-success" (click)="toggle()">Toogle</button>
