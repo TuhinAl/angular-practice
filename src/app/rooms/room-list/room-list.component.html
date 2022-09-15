@@ -1,0 +1,46 @@
+<div class="row" style="display: flex;"> 
+    <div class="col-md-4">
+        <label for=""> Total Room</label>
+        <div *ngIf="total.length  > 0">
+            <ul>
+                <li *ngFor="let item of total">
+                    <p>Room Name: {{item.roomName | uppercase}}</p>
+                    <p> Room Id: {{item.roomId}}</p>
+                    <p>Room Rent: {{item.roomRent | currency:'BDT':'symbol-narrow' }}</p>
+                    <p>Room Rent: {{item.reserVationDate | date:'short'}}</p>
+                    <p>Room Rent: {{item.discount}}</p>
+                    <p>Room Rent: {{item.description | titlecase}}</p>
+                    <br>    
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label for=""> Booked Room</label>
+        <div *ngIf="booked.length  > 0">
+            <ul>
+                <li *ngFor="let item of booked">
+                    <p>Room Name: {{item.roomName}}</p>
+                    <p> Room Id: {{item.roomId}}</p>
+                    <p>Room Rent: {{item.roomRent}}</p>
+                    <br>    
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <label for="">Available Room</label>
+        <div *ngIf="available.length  > 0">
+            <ul>
+                <li *ngFor="let item of available">
+                    <p>Room Name: {{item.roomName}}</p>
+                    <p> Room Id: {{item.roomId}}</p>
+                    <p>Room Rent: {{item.roomRent}}</p>
+                    <br>    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
