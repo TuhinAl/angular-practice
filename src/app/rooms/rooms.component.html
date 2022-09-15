@@ -15,9 +15,12 @@ hello
             <div *ngIf="room.totalRooms.length  > 0">
                 <ul>
                     <li *ngFor="let item of room.totalRooms">
-                        <p>Room Name: {{item.roomName}}</p>
+                        <p>Room Name: {{item.roomName | uppercase}}</p>
                         <p> Room Id: {{item.roomId}}</p>
-                        <p>Room Rent: {{item.roomRent}}</p>
+                        <p>Room Rent: {{item.roomRent | currency:'BDT':'symbol-narrow' }}</p>
+                        <p>Room Rent: {{item.reserVationDate | date:'short'}}</p>
+                        <p>Room Rent: {{item.discount}}</p>
+                        <p>Room Rent: {{item.description | titlecase}}</p>
                         <br>    
                     </li>
                 </ul>
