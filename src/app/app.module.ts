@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AppTestComponent } from './app-test/app-test.component';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { OnChangeParent } from './on-change-parent/on-change-parent.component';
@@ -17,7 +18,8 @@ import { RoomsComponent } from './rooms/rooms.component';
     RoomListComponent,
     HeaderComponent,
     OnChangeComponent,
-    OnChangeParent
+    OnChangeParent,
+    AppTestComponent
   ],
   imports: [
     BrowserModule,
