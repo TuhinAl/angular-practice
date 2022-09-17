@@ -11,6 +11,7 @@ export class RoomsComponent {
     isToogel: Boolean = false;
     selectedRoom: SingleRoom
     roomTitle: string = ' Your Room ';
+    roomToHeader: string = 'Room to Header';
 
     bookedRooms: Array<SingleRoom> = [
         {
